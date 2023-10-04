@@ -1,3 +1,8 @@
+
+      <div class="absolute top-0 left-0 right-0 bottom-0 bg-neutral-5 text-red-500 z-5" style={{background:"rgba(0,0,0,.6)"}}></div>
+
+
+
 import HeroSlider, {Slide} from "hero-slider";
 
 <HeroSlider
@@ -41,3 +46,35 @@ import HeroSlider, {Slide} from "hero-slider";
         }}
       />
      </HeroSlider>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+     setInterval(()=>{
+   switch(image){
+   case img1:
+    setImage(img2);
+    break;
+   case img2:
+    setImage(img3);
+    break;
+   case img3:
+    setImage(img4); 
+    break;
+   default :
+    setImage(img1); 
+    break;
+   }
+
+  },5000);
+  clearInterval();
+
+  
+  return (
+    <div>
+      <div class="relative max-h-screen h-screen max-w-screen w-screen">
+        <img class="absolute top-0 left-0 right-0 bottom-0 w-screen h-screen object-cover z-0" src={image} alt="img" />
+        <button class="z-30 text-red-600 absolute">change back</button>
+      </div>
+    </div>
+  )
